@@ -1,0 +1,7 @@
+@use 'styles/variables' as *;
+
+@media all and (min-width: $mobile) {
+  body {
+    color: red;
+  }
+}

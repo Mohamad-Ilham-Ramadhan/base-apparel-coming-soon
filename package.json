@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mohamad-Ilham-Ramadhan/fylo-data-storage.git"
+    "url": "git+https://github.com/Mohamad-Ilham-Ramadhan/base-apparel-coming-soon.git"
   },
   "author": "Mohamad Ilham Ramadhan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mohamad-Ilham-Ramadhan/fylo-data-storage/issues"
+    "url": "https://github.com/Mohamad-Ilham-Ramadhan/base-apparel-coming-soon/issues"
   },
-  "homepage": "https://github.com/Mohamad-Ilham-Ramadhan/fylo-data-storage#readme",
+  "homepage": "https://github.com/Mohamad-Ilham-Ramadhan/base-apparel-coming-soon#readme",
   "dependencies": {
     "bootstrap": "^4.5.0",
     "react": "^16.13.1",
