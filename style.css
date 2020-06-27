@@ -9960,6 +9960,7 @@ body {
   padding: 0.65rem 1.5rem;
   border-color: rgba(65, 58, 58, 0.2);
   color: #413a3a;
+  font-size: 0.85rem;
 }
 .form-control::placeholder {
   font-size: 0.88rem;
@@ -10035,6 +10036,17 @@ body {
 }
 
 @media (min-width: 768px) {
+  .bg-hero {
+    background-image: url("./src/images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .navbar .navbar-brand img {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
   .navbar {
     margin-bottom: 6.5rem;
   }
@@ -10045,7 +10057,7 @@ body {
   .main {
     position: relative;
     z-index: 1;
-    padding: 1.75rem 10.25rem;
+    padding: 3.75rem 4.25rem;
     height: 100%;
   }
   .main .main-bg {
@@ -10090,6 +10102,16 @@ body {
 
   .form-control {
     padding: 0.9rem 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    padding: 1.75rem 7.25rem;
+  }
+}
+@media (min-width: 1300px) {
+  .main {
+    padding: 1.75rem 10.25rem;
   }
 }
 

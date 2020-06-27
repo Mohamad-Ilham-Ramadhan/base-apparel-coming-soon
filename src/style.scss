@@ -19,6 +19,7 @@ body {
   padding: 0.65rem 1.5rem;
   border-color: color.scale($dark-grayish-red, $alpha: -80%);
   color: $dark-grayish-red;
+  font-size: 0.85rem;
 
   &::placeholder {
     font-size: 0.88rem;
@@ -98,6 +99,21 @@ body {
 }
 
 @include media-breakpoint-up(md) {
+  .bg-hero {
+    background-image: url("./src/images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  .navbar {
+    .navbar-brand {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
   .navbar {
     margin-bottom: 6.5rem;
     .navbar-brand {
@@ -120,7 +136,7 @@ body {
       background-position: center center;
       background-size: cover;
     }
-    padding: 1.75rem 10.25rem;
+    padding: 3.75rem 4.25rem;
     height: 100%;
     .main-title {
       font-size: 4rem;
@@ -155,5 +171,17 @@ body {
   }
   .form-control {
     padding: 0.9rem 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .main {
+    padding: 1.75rem 7.25rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .main {
+    padding: 1.75rem 10.25rem;
   }
 }

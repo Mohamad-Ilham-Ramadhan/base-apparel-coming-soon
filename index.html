@@ -31,13 +31,13 @@
     </header>
     <div class="row no-gutters">
       <div class="col-12 col-md-5 order-md-2">
+        <div class="bg-hero h-100 w-100 d-none d-md-block"></div>
         <img class="w-100 d-md-none" src="src/images/hero-mobile.jpg" alt="" />
-        <img class="w-100 d-none d-md-block" src="src/images/hero-desktop.jpg" alt="" />
       </div>
       <div class="col-12 col-md-7">
         <section class="main text-center text-md-left">
           <div class="main-bg"></div>
-          <nav class="navbar d-md-block pl-md-0">
+          <nav class="navbar d-none d-md-block pl-md-0">
             <a class="navbar-brand" href="#">
               <img
                 src="src/images/logo.svg"
@@ -66,7 +66,11 @@
                 placeholder="Email Address"
                 required
               />
-              <img class="invalid-icon invalid-feedback" src="src/images/icon-error.svg" alt="" >
+              <img
+                class="invalid-icon invalid-feedback"
+                src="src/images/icon-error.svg"
+                alt=""
+              />
               <div class="invalid-feedback">Please provide a valid email</div>
               <button
                 class="btn btn-submit btn-primary-gradient rounded-pill"
@@ -79,7 +83,7 @@
         </section>
       </div>
     </div>
-    </form>
+
     <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function () {
