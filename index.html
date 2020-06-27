@@ -13,6 +13,90 @@
     />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <!-- Image and text -->
+      <nav class="navbar">
+        <a class="navbar-brand" href="#">
+          <img
+            src="src/images/logo.svg"
+            class="d-inline-block align-middle"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+      </nav>
+    </header>
+    <div class="row no-gutters">
+      <div class="col-12">
+        <img class="w-100" src="src/images/hero-mobile.jpg" alt="" />
+      </div>
+      <div class="col-12">
+        <section class="main text-center">
+          <h1 class="main-title text-uppercase mb-3">
+            <span class="text-secondary font-weight-light">we're</span
+            ><br /><span class="text-dark-grayish-red font-weight-bold"
+              >coming soon</span
+            >
+          </h1>
+          <p class="main-text text-secondary mb-4">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to date with announcements
+            and our launch deals.
+          </p>
+          <form class="main-form needs-validation" id="theform" novalidate>
+            <div class="form-group position-relative">
+              <input
+                class="form-control rounded-pill"
+                type="email"
+                placeholder="Email Address"
+                required
+              />
+              <img class="invalid-icon invalid-feedback" src="src/images/icon-error.svg" alt="" >
+              <div class="invalid-feedback">Please provide a valid email</div>
+              <button
+                class="btn btn-submit btn-primary-gradient rounded-pill"
+                type="submit"
+              >
+                <img src="src/images/icon-arrow.svg" alt="" />
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    </form>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (
+              form
+            ) {
+              form.addEventListener(
+                "submit",
+                function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add("was-validated");
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
 </html>

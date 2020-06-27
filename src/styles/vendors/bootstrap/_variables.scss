@@ -1,40 +1,42 @@
 // <=== Project related ===>
-
+$fonts-path: "./src/fonts";
 /* josefin-sans-300 - latin */
 @font-face {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/josefin-sans-v15-latin-300.eot"); /* IE9 Compat Modes */
+  src: url("#{$fonts-path}/josefin-sans-v15-latin-300.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/josefin-sans-v15-latin-300.eot?#iefix")
+    url("#{$fonts-path}/josefin-sans-v15-latin-300.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/josefin-sans-v15-latin-300.woff2")
+    /* IE6-IE8 */ url("#{$fonts-path}/josefin-sans-v15-latin-300.woff2")
       format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/josefin-sans-v15-latin-300.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/josefin-sans-v15-latin-300.ttf")
+    /* Super Modern Browsers */
+      url("#{$fonts-path}/josefin-sans-v15-latin-300.woff") format("woff"),
+    /* Modern Browsers */ url("#{$fonts-path}/josefin-sans-v15-latin-300.ttf")
       format("truetype"),
     /* Safari, Android, iOS */
-      url("../fonts/josefin-sans-v15-latin-300.svg#JosefinSans") format("svg"); /* Legacy iOS */
+      url("#{$fonts-path}/josefin-sans-v15-latin-300.svg#JosefinSans")
+      format("svg"); /* Legacy iOS */
 }
 /* josefin-sans-regular - latin */
 @font-face {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/josefin-sans-v15-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("#{$fonts-path}/josefin-sans-v15-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/josefin-sans-v15-latin-regular.eot?#iefix")
+    url("#{$fonts-path}/josefin-sans-v15-latin-regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/josefin-sans-v15-latin-regular.woff2")
+    /* IE6-IE8 */ url("#{$fonts-path}/josefin-sans-v15-latin-regular.woff2")
       format("woff2"),
     /* Super Modern Browsers */
-      url("../fonts/josefin-sans-v15-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/josefin-sans-v15-latin-regular.ttf")
+      url("#{$fonts-path}/josefin-sans-v15-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("#{$fonts-path}/josefin-sans-v15-latin-regular.ttf")
       format("truetype"),
     /* Safari, Android, iOS */
-      url("../fonts/josefin-sans-v15-latin-regular.svg#JosefinSans")
+      url("#{$fonts-path}/josefin-sans-v15-latin-regular.svg#JosefinSans")
       format("svg"); /* Legacy iOS */
 }
 /* josefin-sans-600 - latin */
@@ -42,18 +44,19 @@
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/josefin-sans-v15-latin-600.eot"); /* IE9 Compat Modes */
+  src: url("#{$fonts-path}/josefin-sans-v15-latin-600.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/josefin-sans-v15-latin-600.eot?#iefix")
+    url("#{$fonts-path}/josefin-sans-v15-latin-600.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/josefin-sans-v15-latin-600.woff2")
+    /* IE6-IE8 */ url("#{$fonts-path}/josefin-sans-v15-latin-600.woff2")
       format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/josefin-sans-v15-latin-600.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/josefin-sans-v15-latin-600.ttf")
+    /* Super Modern Browsers */
+      url("#{$fonts-path}/josefin-sans-v15-latin-600.woff") format("woff"),
+    /* Modern Browsers */ url("#{$fonts-path}/josefin-sans-v15-latin-600.ttf")
       format("truetype"),
     /* Safari, Android, iOS */
-      url("../fonts/josefin-sans-v15-latin-600.svg#JosefinSans") format("svg"); /* Legacy iOS */
+      url("#{$fonts-path}/josefin-sans-v15-latin-600.svg#JosefinSans")
+      format("svg"); /* Legacy iOS */
 }
 
 $mobile: 375px;
@@ -148,8 +151,10 @@ $colors: map-merge(
   $colors
 );
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+// $primary: $blue !default;
+$primary: $soft-red !default;
+// $secondary: $gray-600 !default;
+$secondary: $desaturated-red !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -473,7 +478,7 @@ $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;
 
-$input-btn-focus-width: 0.2rem !default;
+$input-btn-focus-width: 0.05rem !default;
 $input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 

@@ -1,7 +1,91 @@
-@use 'styles/variables' as *;
+@use 'styles/vendors/bootstrap/bootstrap.scss' as *;
+@use 'sass:color';
 
-@media all and (min-width: $mobile) {
-  body {
-    color: red;
+body {
+  font-family: "Josefin Sans";
+  font-size: $font-size;
+  color: $dark-grayish-red;
+}
+.form-control {
+  height: auto;
+  background-color: transparent;
+  padding: 0.65rem 1.5rem;
+  border-color: color.scale($dark-grayish-red, $alpha: -80%);
+  color: $dark-grayish-red;
+
+  &:focus {
+    box-shadow: 0 0 0 0.05rem rgba($soft-red, 1);
+  }
+  &::placeholder {
+    font-size: 0.88rem;
+    color: rgba($desaturated-red, 0.5);
+  }
+}
+.was-validated .form-control:valid {
+  border-color: $soft-red;
+  &:focus {
+    border-color: $soft-red;
+  }
+}
+.invalid-icon.invalid-feedback {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0.7rem;
+  right: 5rem;
+}
+.mb-4 {
+  margin-bottom: 1.75rem !important;
+}
+
+.btn-primary-gradient {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0px 0.7rem 2rem -0.6em hsl(0, 36%, 70%);
+}
+.was-validated :invalid ~ .btn-primary-gradient {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+  box-shadow: 0px 0.7rem 1.5rem -0.2em hsl(0, 36%, 70%);
+}
+
+.text-dark-grayish-red {
+  color: $dark-grayish-red;
+}
+
+.navbar {
+  padding: 1.75rem 2rem;
+
+  .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    img {
+      width: 66%;
+    }
+  }
+}
+
+.main {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  padding: 3.75rem 2rem;
+  .main-title {
+    letter-spacing: 0.75rem;
+  }
+  .main-text {
+    font-size: 0.87rem;
+  }
+  .main-form {
+    .btn-submit {
+      width: 65px;
+      line-height: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.8rem 0.75rem;
+      height: auto;
+    }
   }
 }
