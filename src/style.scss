@@ -6,6 +6,13 @@ body {
   font-size: $font-size;
   color: $dark-grayish-red;
 }
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  box-shadow: 0 0 0 0.1rem rgba($soft-red, 1);
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($soft-red, 1);
+  }
+}
 .form-control {
   height: auto;
   background-color: transparent;
@@ -13,9 +20,6 @@ body {
   border-color: color.scale($dark-grayish-red, $alpha: -80%);
   color: $dark-grayish-red;
 
-  &:focus {
-    box-shadow: 0 0 0 0.05rem rgba($soft-red, 1);
-  }
   &::placeholder {
     font-size: 0.88rem;
     color: rgba($desaturated-red, 0.5);
@@ -26,6 +30,9 @@ body {
   &:focus {
     border-color: $soft-red;
   }
+}
+.invalid-feedback {
+  color: color.scale($soft-red, $saturation: -25%);
 }
 .invalid-icon.invalid-feedback {
   width: 20px;
@@ -87,5 +94,66 @@ body {
       padding: 0.8rem 0.75rem;
       height: auto;
     }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar {
+    margin-bottom: 6.5rem;
+    .navbar-brand {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .main {
+    position: relative;
+    z-index: 1;
+    .main-bg {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url("src/images/bg-pattern-desktop.svg");
+      background-position: center center;
+      background-size: cover;
+    }
+    padding: 1.75rem 10.25rem;
+    height: 100%;
+    .main-title {
+      font-size: 4rem;
+      letter-spacing: 1rem;
+      line-height: 1.05;
+    }
+    .main-text {
+      font-size: 1rem;
+    }
+    .main-form {
+      .btn-submit {
+        width: 100px;
+        padding: 1.1rem 1.75rem;
+      }
+      .form-control {
+        padding: 0.9rem 2rem;
+      }
+      .invalid-feedback {
+        padding-left: 2rem;
+        padding-top: 0.5rem;
+      }
+      .invalid-icon {
+        padding-left: 0;
+        padding-top: 0;
+        width: 25px;
+        height: 25px;
+        right: 7.5rem;
+        top: 0.9rem;
+        margin-top: 0;
+      }
+    }
+  }
+  .form-control {
+    padding: 0.9rem 1.5rem;
   }
 }

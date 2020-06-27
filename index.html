@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="d-md-none">
       <!-- Image and text -->
       <nav class="navbar">
         <a class="navbar-brand" href="#">
@@ -30,18 +30,30 @@
       </nav>
     </header>
     <div class="row no-gutters">
-      <div class="col-12">
-        <img class="w-100" src="src/images/hero-mobile.jpg" alt="" />
+      <div class="col-12 col-md-5 order-md-2">
+        <img class="w-100 d-md-none" src="src/images/hero-mobile.jpg" alt="" />
+        <img class="w-100 d-none d-md-block" src="src/images/hero-desktop.jpg" alt="" />
       </div>
-      <div class="col-12">
-        <section class="main text-center">
-          <h1 class="main-title text-uppercase mb-3">
+      <div class="col-12 col-md-7">
+        <section class="main text-center text-md-left">
+          <div class="main-bg"></div>
+          <nav class="navbar d-md-block pl-md-0">
+            <a class="navbar-brand" href="#">
+              <img
+                src="src/images/logo.svg"
+                class="d-inline-block align-middle"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+          </nav>
+          <h1 class="main-title text-uppercase mb-3 mb-md-4">
             <span class="text-secondary font-weight-light">we're</span
             ><br /><span class="text-dark-grayish-red font-weight-bold"
               >coming soon</span
             >
           </h1>
-          <p class="main-text text-secondary mb-4">
+          <p class="main-text text-secondary mb-4 mb-md-5">
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to date with announcements
             and our launch deals.
