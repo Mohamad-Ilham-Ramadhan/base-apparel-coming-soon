@@ -39,7 +39,7 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 0.7rem;
+  top: 0.5rem;
   right: 5rem;
 }
 .mb-4 {
@@ -92,7 +92,7 @@ body {
       position: absolute;
       top: 0;
       right: 0;
-      padding: 0.8rem 0.75rem;
+      padding: 0.65rem 0.75rem;
       height: auto;
     }
   }
@@ -100,7 +100,7 @@ body {
 
 @include media-breakpoint-up(md) {
   .bg-hero {
-    background-image: url("./src/images/hero-desktop.jpg");
+    background-image: url("./images/hero-desktop.jpg");
     background-size: cover;
     background-position: center center;
   }
@@ -132,7 +132,7 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      background-image: url("src/images/bg-pattern-desktop.svg");
+      background-image: url("./images/bg-pattern-desktop.svg");
       background-position: center center;
       background-size: cover;
     }
@@ -149,7 +149,7 @@ body {
     .main-form {
       .btn-submit {
         width: 100px;
-        padding: 1.1rem 1.75rem;
+        padding: 0.9rem 1.75rem;
       }
       .form-control {
         padding: 0.9rem 2rem;
